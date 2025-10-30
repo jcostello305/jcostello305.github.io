@@ -1,0 +1,81 @@
+body {
+  background: #0d0d0f;
+  color: #e0e0e0;
+  font-family: "Segoe UI", sans-serif;
+  margin: 20px;
+  transition: all 0.3s ease;
+}
+h2 { margin-top: 0; }
+#champ-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.champ {
+  text-align: center;
+  transition: transform 0.2s;
+}
+.champ img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  border: 2px solid #444;
+  object-fit: cover;
+}
+.champ.completed img {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+.champ p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+#controls {
+  margin-top: 10px;
+}
+button {
+  background: #222;
+  color: #eee;
+  border: 1px solid #555;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button:hover { background: #333; }
+.checkboxes label {
+  margin-right: 15px;
+  font-size: 0.9rem;
+}
+
+/* === OBS MODE STYLES === */
+.obs-mode body {
+  background: transparent;
+}
+.obs-mode #controls,
+.obs-mode .checkboxes,
+.obs-mode h2 {
+  display: none;
+}
+.obs-mode #champ-container {
+  flex-wrap: nowrap;
+}
+.obs-mode .champ p {
+  display: none;
+}
+.obs-mode .champ img {
+  width: 140px;
+  height: 140px;
+}
+
+/* Vertical layout */
+.obs-vertical #champ-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Horizontal layout */
+.obs-horizontal #champ-container {
+  flex-direction: row;
+  justify-content: center;
+}
